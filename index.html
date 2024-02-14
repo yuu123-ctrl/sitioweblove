@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>heart letter by alexx_deev</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('descargar.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .contenido-exterior {
+      text-align: center;
+      padding-top: 50px;
+    }
+    .texto-exterior {
+      display: inline-block;
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(219, 112, 147, 0.3);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .texto-exterior p {
+      margin: 0;
+      padding: 0;
+    }
+    .reset {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .reset button {
+      font-weight: bold;
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff5757;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .reset button:hover {
+      background-color: #fc9d9d;
+    }
+    /* Estilos del menú */
+    .menu {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 192, 203, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      z-index: 999; /* Asegurarse de que el menú aparezca por encima del sobre */
+      display: none;
+    }
+    /* Estilos de los botones del menú */
+    .menu-button {
+      background-color: #ff6b8e;
+      color: #fff;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    /* Estilo hover para los botones */
+    .menu-button:hover {
+      background-color: #ff4577;
+    }
+    /* Estilos para el sobre */
+    .envlope-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    #envelope {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 180px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: #f9c5c8;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1000; /* Asegurarse de que el sobre aparezca por encima del menú */
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musica3.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+<div class="envlope-wrapper">
+    <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+            <div class="words line2">Aquí está tu regalo especial</div>
+        </div>
+        <div class="hearts">
+            <div class="heart a1"></div>
+            <div class="heart a2"></div>
+            <div class="heart a3"></div>
+        </div>
+    </div>
+</div>
+
+<div class="contenido-exterior">
+    <div class="texto-exterior">
+        <p>Feliz 14 de febrero y aniversario princesa. Te amo 💗.</p>
+        <p><a href="https://youtu.be/Sl0-Y1cHFBI?si=MJAZ-pEt8uMvw_VY" target="_blank">Haz click aquí</a> para escuchar nuestra canción especial en YouTube.</p>
+    </div>
+</div>
+
+<div class="reset">
+    <button id="open">Abrir sobre</button>
+    <button id="reset">Cerrar sobre</button>
+</div>
+
+<!-- Menú de navegación -->
+<div class="menu" id="menu">
+    <h2>Menú</h2>
+    <ul>
+      <li><a href="minijuego de corazones.html">Amor en el jardin</a></li>
+      <li><a href="minijuego de objetos.html">Objetos</a></li>
+    </ul>
+</div>
+
+<!-- Botón para mostrar el menú -->
+<button id="boton-menu" class="menu-button">Ver Menú</button>
+
+<!-- JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

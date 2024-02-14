@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amor en el Jardín</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #titulo {
+      text-align: center;
+      font-size: 24px;
+      color: #ff69b4; /* Color rosa */
+      margin-top: 20px;
+    }
+    #texto {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    #jardin {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden; /* Para evitar que el video y el texto sobresalgan del jardín */
+    }
+    #video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #texto {
+      position: absolute;
+      top: 80%; /* Ajusta este valor según tu preferencia */
+      left: 50%;
+      transform: translateX(-50%);
+      color: white; /* Color blanco para que sea visible sobre la imagen */
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .elemento {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #flor1 {
+      top: 200px;
+      left: 100px;
+    }
+    #flor2 {
+      top: 300px;
+      left: 300px;
+    }
+    #mariposa {
+      top: 400px;
+      left: 200px;
+    }
+    /* Agrega más estilos para otros elementos aquí */
+    #menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 192, 203, 0.7);
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+    #menu h2 {
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #menu ul li {
+      margin-bottom: 5px;
+    }
+    #menu ul li a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 105, 180, 0.9);
+      transition: background-color 0.3s ease;
+    }
+    #menu ul li a:hover {
+      background-color: rgba(255, 20, 147, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">¡Amor en el Jardín! (nuestro)</h1>
+  <div id="jardin">
+    <img src="jardin.jpeg" width="100%" height="100%" alt="Jardín de amor">
+    <video id="video" width="600" height="400" autoplay controls>
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+    <p id="texto">Disfruta de este hermoso momento en nuestro jardín lleno de amor. Aquí te puse a Laufey y su canción porque sé que te gusta 💗</p>
+    <img src="flor1.jpeg" id="flor1" class="elemento" width="100" height="100">
+    <img src="flor2.jpeg" id="flor2" class="elemento" width="100" height="100">
+    <img src="mariposa.gif" id="mariposa" class="elemento" width="100" height="100">
+    <!-- Agrega más imágenes de elementos aquí -->
+  </div>
+
+  <audio id="musica" autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <div id="menu">
+    <h2>Menú</h2>
+    <ul>
+      <li><a href="minijuego de corazones.html">Amor en el Jardín</a></li>
+      <li><a href="minijuego de objetos.html">Objetos</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Evento clic para la flor1
+    document.getElementById('flor1').addEventListener('click', function() {
+      // Animación al hacer clic en la flor1
+      this.style.transform = 'rotate(360deg)';
+      // Puedes agregar más acciones aquí
+      // Por ejemplo, mostrar una historia o mensaje
+      alert('¡Has encontrado una flor especial! (a ti)');
+    });
+
+    // Evento clic para la flor2
+    document.getElementById('flor2').addEventListener('click', function() {
+      // Animación al hacer clic en la flor2
+      this.style.transform = 'rotate(360deg)';
+      // Puedes agregar más acciones aquí
+      // Por ejemplo, mostrar una historia o mensaje
+      alert('¡Has encontrado otra flor especial!(vos)');
+    });
+
+    // Evento clic para la mariposa
+    document.getElementById('mariposa').addEventListener('click', function() {
+      // Animación al hacer clic en la mariposa
+      this.style.transform = 'scale(2)';
+      // Puedes agregar más acciones aquí
+      // Por ejemplo, mostrar una historia o mensaje
+      alert('¡Una hermosa mariposa ha venido a visitarte!');
+    });
+    // Agrega más eventos clic para otros elementos aquí
+  </script>
+</body>
+</html>

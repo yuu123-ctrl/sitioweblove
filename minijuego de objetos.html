@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Juego de Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('fondo.jpeg'); /* Cambia 'fondo.jpg' por la URL de tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    #game-container {
+      margin-top: 50px;
+    }
+    .love-object {
+      width: 100px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .love-object:hover {
+      transform: scale(1.1);
+    }
+    #score {
+      font-size: 24px;
+      margin-top: 20px;
+      color: white; /* Cambia el color del texto según sea necesario para que sea legible en tu imagen de fondo */
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musica2.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <h1>¡Encuentra a Laufey!</h1>
+  <audio id="audio" src="melodia_romantica.mp3" autoplay loop></audio>
+  <div id="game-container">
+    <p>Haz clic en las diferentes Laufeys.</p>
+    <p id="score">Puntuación: <span id="score-value">0</span></p>
+    <!-- Agrega imágenes de objetos de amor aquí -->
+    <img src="1.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="2.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="3.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="4.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="5.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="6.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="7.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="8.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="9.jpeg" class="love-object" onclick="loveObjectClick(this)">
+    <img src="10.jpeg" class="love-object" onclick="loveObjectClick(this)">
+  </div>
+
+  <script>
+    // Inicializar variables del juego
+    let score = 0;
+
+    // Función para actualizar la puntuación en la pantalla
+    function updateScore() {
+      document.getElementById('score-value').innerText = score;
+    }
+
+    // Función para manejar el clic en un objeto de amor
+    function loveObjectClick(object) {
+      score += 10;
+      updateScore();
+      // Reproducir un sonido de "ding" al hacer clic en un objeto de amor
+      let audio = new Audio('cute.mp3');
+      audio.play();
+      // Desaparecer el objeto de amor después de hacer clic en él
+      object.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+
